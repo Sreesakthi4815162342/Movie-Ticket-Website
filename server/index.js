@@ -16,6 +16,9 @@ dbConnection()
 app.use(cors({
     origin:"http://localhost:5173",credentials:true
 }));
+app.get("/", (req, res) => {
+    res.json("server started");
+  });
 app.use(express.json())
 app.use("/user",userRouter)
 app.use("/movie",movieRouter)
@@ -25,6 +28,7 @@ app.use("/showtime",showtimeRouter)
 app.use("/payment",paymentRouter)
 app.use("/booking",bookingRouter)
 app.use(cookieparser())
+
 app.listen(process.env.PORT,()=>{
     console.log("server starts on port 3000");
 })
