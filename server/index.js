@@ -14,7 +14,7 @@ const { bookingRouter } = require("./routes/bookingRoutes");
 
 dbConnection()
 app.use(cors({
-    origin:"https://movie-ticket-website-mac1.vercel.app",credentials:true
+    origin:"https://movie-ticket-website-mac1-4y36fuhny-sreesakthis-projects.vercel.app/",credentials:true
 }));
 app.get("/", (req, res) => {
     res.json("server started");
