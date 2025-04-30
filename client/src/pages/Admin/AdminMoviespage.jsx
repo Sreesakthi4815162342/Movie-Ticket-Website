@@ -180,7 +180,7 @@ function AdminMoviespage() {
             ))}
     </select>
     </div>
-    <div className='grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5'>
+    <div className='grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-5 gap-5'>
     { movies?.map((movie) => (
         <Movie item={movie} key={movie._id} role={"admin"}/>
     ))}

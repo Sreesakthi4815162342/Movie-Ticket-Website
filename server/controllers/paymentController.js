@@ -26,8 +26,8 @@ const paymentFunction=async(req,res)=>{
             payment_method_types:['card'],
             line_items:lineItems,
             mode:'payment',
-            success_url:'https://movie-ticket-website-mac1.vercel.app/payment/success',
-            cancel_url:'https://movie-ticket-website-mac1.vercel.app/payment/failed'
+            success_url:`${process.env.FRONTEND_URL}/payment/success`,
+            cancel_url:`${process.env.FRONTEND_URL}/payment/failed`
         })
 
         res.status(200).json({

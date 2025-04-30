@@ -31,7 +31,11 @@ function AdminTheaterspage() {
         createTheater(formData).then((res)=>{
             console.log(res);
           toast.success(res?.data)
-          navigate("/admin/admintheaters")
+          getTheaters().then((res)=>{
+            setTheaters(res?.data)
+          }).catch((err)=>{
+            console.log(err);
+          })
         }).catch((err)=>{
           toast.error(err?.response?.data?.error)
         })

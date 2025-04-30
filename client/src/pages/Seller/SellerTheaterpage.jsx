@@ -44,6 +44,13 @@ function SellerTheaterpage() {
         updateTheater(formData,id).then((res)=>{
             console.log(res);
           toast.success(res?.data?.message)
+          getTheater(id).then((res)=>{
+            setTheater(res?.data)
+            console.log(res.data);
+            
+          }).catch((err)=>{
+            console.log(err);
+          })
         }).catch((err)=>{
           toast.error(err?.response?.data?.error)
         })

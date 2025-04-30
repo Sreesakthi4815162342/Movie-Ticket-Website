@@ -35,7 +35,7 @@ function SellerAvailableshows({item}) {
   return (
     <div>
     <div className='grid w-full rounded-lg relative'>
-    <div className='flex flex-col gap-2 items-center shadow-lg p-4 rounded-xl bg-white justify-between h-[450px]'>
+    <div className='flex flex-col gap-2 items-center shadow-lg p-4 rounded-xl bg-white justify-between '>
   <div className='w-full'>
     <img
       src={item?.movie?.image}
