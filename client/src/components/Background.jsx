@@ -34,7 +34,8 @@ function Background({item}) {
    })
   }
   return (
-    <div>
+   
+      <div>
       <div className='bg-no-repeat bg-cover w-full bg-center h-[300px] sm:h-[350px] md:h-[400px] lg:h-[600px] relative hero' style={{ backgroundImage: `linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 10)), url(${item?.image})` }}>
       <div className='absolute gap-10 flex items-center justify-center m-6'>
       <div className='group relative'>

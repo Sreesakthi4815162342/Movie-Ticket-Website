@@ -15,9 +15,7 @@ setData(prev=>({...prev,[event.target.name]:event.target.value}))
   }
   const handleSubmit=(event)=>{
     event.preventDefault();
-    toast.success("submitted")
     userLogin(data).then((res)=>{
-      console.log(res);
       
       const role=res.data.existUser.role
       if(role=="admin"){
@@ -28,18 +26,18 @@ setData(prev=>({...prev,[event.target.name]:event.target.value}))
       }else if(role=="seller"){
         dispatch(saveUser(res.data.existUser))
         localStorage.setItem("token",res?.data?.token)
-        toast.success(res?.data?.massage)
+        toast.success(res?.data?.message)
         navigate("/seller")
       }
       else{
         dispatch(saveUser(res.data.existUser))
         localStorage.setItem("token",res?.data?.token)
-        toast.success(res?.data?.massage)
+        toast.success(res?.data?.message)
           navigate("/")
       }
    
     }).catch((err)=>{
-      toast.error(err?.response?.data?.error)
+      toast.error(err?.response?.data)
       console.log(err);
       
     })

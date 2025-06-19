@@ -12,12 +12,11 @@ setData(prev=>({...prev,[event.target.name]:event.target.value}))
   }
   const handleSubmit=(event)=>{
     event.preventDefault();
-    toast.success("submitted")
     userSignup(data).then((res)=>{
       toast.success(res?.data?.message)
       navigate("/login")
     }).catch((err)=>{
-      toast.error(err?.response?.data?.error)
+      toast.error(err?.response?.data)
     })
   }
   return (
