@@ -22,7 +22,7 @@ function Homepage() {
       <div className="carousel rounded-box gap-5 w-full">
         {
           movies.map((movie)=>(
-            <Recommended item={movie} key={movie._id}/>
+            movie ? <Recommended item={movie} key={movie._id}/> : <div className="skeleton h-32 w-32"></div>
           ))
         }
       </div>
